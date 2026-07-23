@@ -1,0 +1,20 @@
+generated: '2026-07-17'
+method: searched
+probe: true
+url: https://trust.agentsync.io/
+platform: Conveyor (trust center is gated behind an email login for full attestation docs)
+certifications:
+- SOC 2   # explicitly stated "SOC2 compliant" on https://agentsync.io/producersync-api
+note: >-
+  trust.agentsync.io hosts AgentSync's trust center on Conveyor and is gated
+  behind an email request wall, so the full certification list could not be
+  verified on the open surface. Only SOC 2 is asserted here because it is stated
+  verbatim on the public ProducerSync API page. Additional frameworks may be
+  disclosed inside the gated portal but were not confirmed and are not recorded.
+evidence:
+- source: https://agentsync.io/producersync-api
+  keywords:
+  - soc2
+- source: https://trust.agentsync.io/
+  keywords:
+  - trust center

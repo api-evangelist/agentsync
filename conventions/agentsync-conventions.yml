@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.agentsync.io/api-environments
+api: ProducerSync API
+note: >-
+  Cross-cutting conventions captured from AgentSync's public documentation. No
+  public OpenAPI is available (the developer portal requires registration), so
+  request/response envelope, pagination, and idempotency semantics are not
+  published on the open surface and are recorded as unknown rather than guessed.
+authentication:
+  style: OAuth 2.0
+  transport: bearer token
+  ref: authentication/agentsync-authentication.yml
+architecture:
+  style: REST
+  format: JSON
+  transport: HTTPS
+environments:
+  separation: base-URL (production api.agentsync.io vs sandbox api.sandbox.agentsync.io)
+  ref: sandbox/agentsync-sandbox.yml
+idempotency: null      # not documented on the public surface
+pagination: null       # not documented on the public surface
+metadata: null
+request_tracing: null
+versioning: null       # no public version scheme documented
+error_envelope: null   # not documented on the public surface
+rate_limit_signaling: null

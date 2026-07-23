@@ -1,0 +1,20 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.agentsync.io/api-environments
+api: ProducerSync API
+environments:
+- name: Sandbox
+  base_url: https://api.sandbox.agentsync.io
+  purpose: Development and QA
+  cost: Free to use for development and QA
+  data: Obfuscated data sourced from the NIPR Beta environment for realistic testing responses
+  notes:
+  - Recently issued NPNs may not appear immediately
+  - Not suitable for validating data accuracy or freshness
+- name: Production
+  base_url: https://api.agentsync.io
+  purpose: Live integrations (only after sandbox testing is complete)
+  cost: All requests are billed according to your plan
+  data: Real producer data from the NIPR system
+auth: OAuth 2.0 (see authentication/agentsync-authentication.yml)
+test_values: null   # AgentSync does not publish fixed magic test identifiers; sandbox returns obfuscated NIPR Beta records

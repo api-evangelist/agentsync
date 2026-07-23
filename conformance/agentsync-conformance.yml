@@ -1,0 +1,16 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentsync.io/producersync-api
+standards:
+- id: oauth2
+  conforms: true
+  evidence: ProducerSync API documented as using OAuth 2.0 architecture (agentsync.io/producersync-api)
+- id: rest
+  conforms: true
+  evidence: Documented as a modern REST API returning JSON
+- id: soc2
+  conforms: true
+  evidence: '"SOC2 compliant" stated on agentsync.io/producersync-api; attestation via trust.agentsync.io'
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: error envelope not documented on the public surface

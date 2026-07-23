@@ -1,0 +1,25 @@
+generated: '2026-07-17'
+method: searched
+source: probed /.well-known/ on developer.agentsync.io, agentsync.io, api.agentsync.io
+hosts:
+- host: https://developer.agentsync.io
+  documents:
+  - path: /.well-known/oauth-authorization-server   # RFC 8414 — Kong Konnect dev-portal login OAuth (authorization_code + PKCE), NOT the ProducerSync API
+    status: 200
+    file: agentsync-oauth-authorization-server.json
+  - path: /.well-known/openid-configuration
+    status: 200   # returns the portal SPA HTML shell, not an OIDC document — not captured
+  - path: /.well-known/security.txt
+    status: 200   # returns the portal SPA HTML shell, not an RFC 9116 document — not captured
+  - path: /.well-known/api-catalog
+    status: 200   # returns the portal SPA HTML shell, not an RFC 9727 document — not captured
+- host: https://agentsync.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://api.agentsync.io
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 401   # API host requires auth

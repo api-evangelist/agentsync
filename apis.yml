@@ -1,8 +1,15 @@
 aid: agentsync
 name: Agentsync
-description: Agentsync is a company surfaced as a portfolio company of anthemis, craft-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  AgentSync builds modern insurance compliance infrastructure that connects carriers,
+  agencies, MGAs, and producers. Its ProducerSync API is a REST API delivering more than
+  200 enriched data points sourced from the National Insurance Producer Registry (NIPR) —
+  producer and adjuster licensing, carrier appointments, and personal information — so
+  insurance businesses can automate producer onboarding, licensing validation, and
+  appointment compliance without manual paperwork. The platform (Manage, AutoPilot,
+  Contracting, and the ProducerSync API) is cloud-native on AWS, SOC 2 compliant, and
+  authenticates with OAuth 2.0. AgentSync is backed by Anthemis and Craft Ventures and was
+  added to the API Evangelist network as a company profile.
 url: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +18,56 @@ x-backed-by:
 - craft-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://agentsync.io/wp-content/uploads/2022/09/AgentSync-header-1200x750-1.png
 tags:
 - Company
-apis: []
+- Insurance
+- InsurTech
+- Compliance
+- Producer Management
+- Licensing
+- NIPR
+- REST
+- OAuth2
+apis:
+- name: ProducerSync API
+  description: >-
+    A modern REST API delivering enriched, actionable producer and adjuster data from the
+    NIPR (200+ data points: licensing, carrier appointments, adjuster licensing) into your
+    existing tech stack. OAuth 2.0, JSON over HTTPS, with separate sandbox and production
+    environments.
+  humanURL: https://agentsync.io/producersync-api
+  baseURL: https://api.agentsync.io
+  tags:
+  - Insurance
+  - Compliance
+  - Licensing
+  - NIPR
+  - Producer Data
+  properties:
+  - type: APIReference
+    url: https://developer.agentsync.io/
+  - type: GettingStarted
+    url: https://developer.agentsync.io/api-environments
+  - type: Sandbox
+    url: sandbox/agentsync-sandbox.yml
+  - type: Authentication
+    url: authentication/agentsync-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +76,48 @@ maintainers:
 common:
 - type: Website
   url: https://agentsync.io
+- type: DeveloperPortal
+  url: https://developer.agentsync.io/
+- type: Documentation
+  url: https://developer.agentsync.io/
+- type: Support
+  url: https://help.agentsync.io/
+- type: Blog
+  url: https://agentsync.io/blog
+- type: GitHubOrganization
+  url: https://github.com/agentsync
+- type: Pricing
+  url: https://agentsync.io/pricing
+- type: SignUp
+  url: https://agentsync.io/contact
+- type: TermsOfService
+  url: https://agentsync.io/terms-conditions
+- type: PrivacyPolicy
+  url: https://agentsync.io/website-privacy-notice
+- type: StatusPage
+  url: https://status.agentsync.io/
+- type: Lifecycle
+  url: lifecycle/agentsync-lifecycle.yml
+- type: Authentication
+  url: authentication/agentsync-authentication.yml
+- type: Conventions
+  url: conventions/agentsync-conventions.yml
+- type: Sandbox
+  url: sandbox/agentsync-sandbox.yml
+- type: WellKnown
+  url: well-known/agentsync-well-known.yml
+- type: LLMsTxt
+  url: llms/agentsync-llms.txt
+- type: Conformance
+  url: conformance/agentsync-conformance.yml
+- type: Compliance
+  url: security/agentsync-trust-center.yml
+- type: TrustCenter
+  url: security/agentsync-trust-center.yml
+- type: DomainSecurity
+  url: security/agentsync-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

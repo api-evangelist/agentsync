@@ -1,0 +1,9 @@
+generated: '2026-07-17'
+method: searched
+source: https://status.agentsync.io/
+api: ProducerSync API
+versioning: null            # no public version policy documented
+deprecation: null           # no public deprecation/sunset policy documented
+sla: null
+status_page: https://status.agentsync.io/   # AgentSync Statuspage (Atlassian Statuspage)
+deprecated_operations: []
